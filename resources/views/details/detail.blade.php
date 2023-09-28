@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
 <div>
         @if($errors->any())
         <ul>
@@ -32,21 +33,22 @@
             <label>Kodi</label>
             <input type="text" name="code" placeholder="" value="{{empty($detail) || $detail === null ? '' : $detail->code}}" />
         </div>
-
         <div>
             <input type="submit" value="Search" />
         </div>
     </form>
 </div>
 
+<button onclick="printDiv('print-window');">PRINT</button>
+
+
 <!--<a href="{{ url('/comparison') }}" class="btn btn-xs btn-info pull-right">Edit</a>-->
 
+
 @if (empty($detail) || $detail === null)
-    Nuk u gjet asnje rezultat!
-
+    
 @else
-
-    <div class="ticket">
+    <div class="ticket" id="print-window">
         <div class="header">
             <div class="logo">
                 <img src="{{ asset('megatekLogo.png') }}" alt="Logo">
@@ -91,6 +93,8 @@
         </div>
     </div>
 @endif
+
+<script src="{{ asset('js/printDiv.js') }}"></script>
 </body>
 
 </html>

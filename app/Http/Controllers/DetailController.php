@@ -27,7 +27,19 @@ class DetailController extends Controller
      */
     public function getSmallEsl()
     {
-        $details = Detail::all();
+       
+        return view('details.eslSmall',['details'=>null]);
+    }
+
+        /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getSmallEslSearch(Request $request)
+    {
+        $codes = explode(',',$request->code);
+        $details = Detail::whereIn('code',$codes)->get();
         return view('details.eslSmall',['details'=>$details]);
     }
 
@@ -121,12 +133,12 @@ class DetailController extends Controller
 
         
         $validator = Validator::make($request->all(), [
-            'code' => 'required|numeric|max_digits:6'
+            'code' => 'required|numeric|digits:6'
 
         ],$messages = [
             'required' => 'Kodi nuk mund te lihet bosh.',
             'numeric' => 'Kodi mund te jete vetem numra.',
-            'max_digits' => 'Kodi duhet te jete vetem me 6 numra.'
+            'digits' => 'Kodi duhet te jete vetem me 6 numra.'
         ]);
  
         if ($validator->fails()) {

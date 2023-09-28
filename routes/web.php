@@ -25,7 +25,10 @@ Route::post('/details/search', [DetailController::class,'search'])->name('detail
 Route::post('/comparison/search', [DetailController::class,'searchComparison'])->name('detailsComparisonSearch');
 Route::get('/comparison', [DetailController::class,'getComparison'])->name('detailsComparison');
 
+Route::post('/esl/small/search', [DetailController::class,'getSmallEslSearch'])->name('smallEslSearch');
+
 Route::get('/esl/small', [DetailController::class,'getSmallEsl'])->name('smallEsl');
+
 
 Route::get('/esl/big', [DetailController::class,'getBigEsl'])->name('bigEsl');
 

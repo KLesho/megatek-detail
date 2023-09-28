@@ -9,24 +9,41 @@
 </head>
 
 <body>
-    <h1>TEST</h1>
-    <div> @foreach($details as $detail)
-        <p>{{$detail->code}}</p>
-        <a href="{{route('details.show',[$detail->code])}}">Code</a>
-        <a href="{{route('bigEsl',[$detail->code])}}">Code</a>
-        <a href="{{route('detailsComparison',[$detail->code])}}">Code</a>
-        @endforeach
-    </div>
+
+<div class="form-container">
+    <form method="POST" action="{{route('smallEslSearch')}}">
+        @csrf
+        @method('POST')
+    
+        <div class="kodi">
+            <label>Kodi</label>
+            <input type="text" id="refresh-text" name="code" placeholder=""  value="" />
+        </div>
+        <div>
+            <input type="submit" value="Refresh" />
+        </div>
+    </form>
+</div>
+@if (empty($details) || $details === null)
+
+@else
+    
     <header>
         <div class="button-container">
-            <button class="red-button">Refresh</button>
-            <button class="red-button">Clear</button>
+       
+        <form method="POST" action="{{route('smallEslSearch')}}">
+        @csrf
+        @method('POST')
+        <input type="submit"  class="red-button" value="Clear" />
+        </form>
         </div>
     </header>
     
     <div class="content-container">
         <div class="column-left">
             <!-- Section 1 -->
+            <div> @foreach($details as $detail)
+
             <section class="section">
                 <div class="section-title">
                     {{$detail->name}}
@@ -43,172 +60,14 @@
                     {{$detail->description}}
                 </div>
             </section>
-            
-            <!-- Section 2 -->
-            <section class="section">
-                <div class="section-title">
-                    {{$detail->name}}
-                </div>
-                <div class="sub-section">
-                    <div class="sub-section-right">
-                        {{$detail->codeName}}
-                    </div>
-                    <div class="sub-section-left">
-                        Kodi: {{$detail->code}}
-                    </div>
-                </div>
-                <div class="description">
-                    {{$detail->description}}
-                </div>
-            </section>
-            
-            <!-- Section 3 -->
-            <section class="section">
-                <div class="section-title">
-                    {{$detail->name}}
-                </div>
-                <div class="sub-section">
-                    <div class="sub-section-right">
-                        {{$detail->codeName}}
-                    </div>
-                    <div class="sub-section-left">
-                        Kodi: {{$detail->code}}
-                    </div>
-                </div>
-                <div class="description">
-                    {{$detail->description}}
-                </div>
-            </section>
-            
-            <!-- Section 4 -->
-            <section class="section">
-                <div class="section-title">
-                    {{$detail->name}}
-                </div>
-                <div class="sub-section">
-                    <div class="sub-section-right">
-                        {{$detail->codeName}}
-                    </div>
-                    <div class="sub-section-left">
-                        Kodi: {{$detail->code}}
-                    </div>
-                </div>
-                <div class="description">
-                    {{$detail->description}}
-                </div>
-            </section>
-            
-            <!-- Section 5 -->
-            <section class="section">
-                <div class="section-title">
-                    {{$detail->name}}
-                </div>
-                <div class="sub-section">
-                    <div class="sub-section-right">
-                        {{$detail->codeName}}
-                    </div>
-                    <div class="sub-section-left">
-                        Kodi: {{$detail->code}}
-                    </div>
-                </div>
-                <div class="description">
-                    {{$detail->description}}
-                </div>
-            </section>
-        </div>
-        
-        <div class="column-right">
-            <!-- Section 6 -->
-            <section class="section">
-                <div class="section-title">
-                    {{$detail->name}}
-                </div>
-                <div class="sub-section">
-                    <div class="sub-section-right">
-                        {{$detail->codeName}}
-                    </div>
-                    <div class="sub-section-left">
-                        Kodi: {{$detail->code}}
-                    </div>
-                </div>
-                <div class="description">
-                    {{$detail->description}}
-                </div>
-            </section>
-            
-            <!-- Section 7 -->
-            <section class="section">
-                <div class="section-title">
-                    {{$detail->name}}
-                </div>
-                <div class="sub-section">
-                    <div class="sub-section-right">
-                        {{$detail->codeName}}
-                    </div>
-                    <div class="sub-section-left">
-                        Kodi: {{$detail->code}}
-                    </div>
-                </div>
-                <div class="description">
-                    {{$detail->description}}
-                </div>
-            </section>
-            
-            <!-- Section 8 -->
-            <section class="section">
-                <div class="section-title">
-                    {{$detail->name}}
-                </div>
-                <div class="sub-section">
-                    <div class="sub-section-right">
-                        {{$detail->codeName}}
-                    </div>
-                    <div class="sub-section-left">
-                        Kodi: {{$detail->code}}
-                    </div>
-                </div>
-                <div class="description">
-                    {{$detail->description}}
-                </div>
-            </section>
-            
-            <!-- Section 9 -->
-            <section class="section">
-                <div class="section-title">
-                    {{$detail->name}}
-                </div>
-                <div class="sub-section">
-                    <div class="sub-section-right">
-                        {{$detail->codeName}}
-                    </div>
-                    <div class="sub-section-left">
-                        Kodi: {{$detail->code}}
-                    </div>
-                </div>
-                <div class="description">
-                    {{$detail->description}}
-                </div>
-            </section>
-            
-            <!-- Section 10 -->
-            <section class="section">
-                <div class="section-title">
-                    {{$detail->name}}
-                </div>
-                <div class="sub-section">
-                    <div class="sub-section-right">
-                        {{$detail->codeName}}
-                    </div>
-                    <div class="sub-section-left">
-                        Kodi: {{$detail->code}}
-                    </div>
-                </div>
-                <div class="description">
-                    {{$detail->description}}
-                </div>
-            </section>
-        </div>
+            @endforeach
+
+            </div>
     </div>
+
+    @endif
+
+   
 </body>
 
 </html>

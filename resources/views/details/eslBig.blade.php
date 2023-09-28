@@ -17,7 +17,7 @@
     </div>
     <header>
         <div class="button-container">
-            <button class="red-button">Refresh</button>
+            <button class="red-button" onclick="">Refresh</button>
             <button class="red-button">Clear</button>
         </div>
     </header>
