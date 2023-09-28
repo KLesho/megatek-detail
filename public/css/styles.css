@@ -1,0 +1,136 @@
+@page {
+  size: A3;
+  margin: 20; /* Remove default page margins */
+}
+/* Style for the header section */
+.header {
+  display: flex;
+  justify-content: space-between; /* To separate the logo and code */
+  align-items: center;
+  padding: 10px; /* Add padding for spacing */
+  max-width: 100%;
+}
+
+/* Style for the logo */
+.logo img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+/* Style for the code field */
+.code-field {
+  text-align: right;
+  background-color: #f0f0f0; /* Gray background color for the header */
+}
+
+/* Rest of your previous CSS styles remain the same */
+
+/* Style for the description section (optional) */
+.description-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  flex-direction: column; /* Stack the two divs vertically */
+  position: relative; /* Set position to relative for the parent */
+}
+
+.description {
+  flex: 1;
+  word-wrap: break-word;
+}
+
+.qr-code {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 20%; /* Adjust the maximum width of the QR code as needed */
+}
+/* Style for the <h2> element */
+.product-name {
+  background-color: #f0f0f0; /* Gray background color */
+  text-align: center; /* Center the text horizontally */
+  padding: 10px; /* Add padding for spacing */
+  margin: 0; /* Remove default margin */
+}
+
+.product-subname{
+  text-align: center; /* Center the text horizontally */
+  padding: 10px; /* Add padding for spacing */
+  margin: 0;
+}
+
+.qr-code img {
+max-width: 100%; /* Make the image responsive by setting its max-width to 100% */
+height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+align-items: end;
+/* You can further customize the width and height as needed */
+}
+
+.product-info-image {
+display: flex; /* Use flexbox to arrange elements in a row */
+align-items: flex-start; /* Align items to the top of the container */
+justify-content: space-between; /* Add space between the two elements */
+}
+
+.product-info {
+flex: 1; /* Allow the product-info div to grow and take available space */
+padding: 10px; /* Add some padding for spacing */
+}
+
+.product-image {
+padding: 10px; /* Add some padding for spacing */
+}
+
+.price-section {
+display: flex;
+justify-content: center; /* Center horizontally */
+font-size: 30px; /* Adjust the font size as needed */
+color: red; /* Set the font color to red */
+}
+
+form {
+  background-color: #ffffff; /* Add a background color for the form */
+  padding: 20px; /* Add padding to the form */
+  border: 1px solid #ccc; /* Add a border for the form */
+  border-radius: 5px; /* Add rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.kodi{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 30%; /* Make text input full-width within the form */
+  padding: 8px; /* Add padding for text input */
+  margin-bottom: 10px; /* Add spacing between inputs */
+}
+
+input[type="submit"] {
+  background-color: #007bff; /* Change the background color of the submit button */
+  color: #fff; /* Change the text color of the submit button */
+  padding: 10px 20px; /* Add padding to the submit button */
+  border: none; /* Remove the button border */
+  border-radius: 5px; /* Add rounded corners to the button */
+  cursor: pointer; /* Add a pointer cursor to the button */
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+.form-container{
+  display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto; /* Center horizontally within the page */
+      max-width: 400px; /* Set a maximum width for the form container */
+      padding: 20px; /* Add padding to the form container */
+
+}

@@ -1,0 +1,224 @@
+@page {
+    size: A5;
+    margin: 0mm; /* Adjust margins as needed */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* To separate the logo and code */
+    align-items: center;
+    padding: 10px; /* Add padding for spacing */
+    max-width: 100%;
+}
+
+.code-field {
+text-align: right;
+background-color: #f0f0f0; /* Gray background color for the header */
+}
+
+.description-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    flex-direction: column; /* Stack the two divs vertically */
+    position: relative; /* Set position to relative for the parent */
+}
+
+.description {
+flex: 1;
+word-wrap: break-word;
+}
+
+.product-info-image {
+display: flex; /* Use flexbox to arrange elements in a row */
+align-items: flex-start; /* Align items to the top of the container */
+justify-content: space-between; /* Add space between the two elements */
+}
+
+.product-info {
+flex: 1; /* Allow the product-info div to grow and take available space */
+padding: 10px; /* Add some padding for spacing */
+}
+
+.product-name {
+background-color: #f0f0f0; /* Gray background color */
+text-align: center; /* Center the text horizontally */
+padding: 10px; /* Add padding for spacing */
+margin: 0; /* Remove default margin */
+}
+
+.product-subname{
+text-align: center; /* Center the text horizontally */
+padding: 10px; /* Add padding for spacing */
+margin: 0;
+}
+
+.product-image {
+padding: 10px; /* Add some padding for spacing */
+width:20px;
+height: 20px;
+}
+
+.ticket {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 19px;
+    padding: 2px;
+    align-items: baseline;
+    background-color: #fff;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    width: 50%;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    float: left;
+}
+
+.header img {
+    max-width: 100px;
+}
+
+.code-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -25px;
+    margin-left: 350px;
+}
+
+.code-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -25px;
+    margin-left: 431px;
+}
+.code input {
+    width: 19%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.product-name {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.product-sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product-details {
+    flex: 1;
+    margin-top: 10px;
+}
+
+.product-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-details ul li {
+    margin-bottom: 5px;
+}
+
+.product-photo {
+    flex: 1;
+    margin-left: 20px; /* Add margin to separate sections */
+    margin-top: 10px;
+}
+
+.product-photo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-description {
+    margin-top: 20px;
+}
+
+.qr-code {
+    margin-top: 20px;
+}
+
+.qr-code img {
+    max-width: 100px;
+}
+
+.price-section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    font-size: 30px; /* Adjust the font size as needed */
+    color: red; /* Set the font color to red */
+}
+
+form {
+    background-color: #ffffff; /* Add a background color for the form */
+    padding: 20px; /* Add padding to the form */
+    border: 1px solid #ccc; /* Add a border for the form */
+    border-radius: 5px; /* Add rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
+  .kodi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .codes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    width: 30%; /* Make text input full-width within the form */
+    padding: 8px; /* Add padding for text input */
+    margin-bottom: 10px; /* Add spacing between inputs */
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff; /* Change the background color of the submit button */
+    color: #fff; /* Change the text color of the submit button */
+    padding: 10px 20px; /* Add padding to the submit button */
+    border: none; /* Remove the button border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    cursor: pointer; /* Add a pointer cursor to the button */
+  }
+  
+  /* Hover effect for the submit button */
+  input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+  }
+  
+  .form-container{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; /* Center horizontally within the page */
+        max-width: 400px; /* Set a maximum width for the form container */
+        padding: 20px; /* Add padding to the form container */
+  
+  }
+
+.clearfix::after {
+content: "";
+display: table;
+clear: both;
+}

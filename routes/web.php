@@ -15,8 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('details.detail');
 });
 
 Route::resource('details', DetailController::class);
+
+Route::post('/details/search', [DetailController::class,'search'])->name('details.search');
+
+Route::post('/comparison/search', [DetailController::class,'searchComparison'])->name('detailsComparisonSearch');
+Route::get('/comparison', [DetailController::class,'getComparison'])->name('detailsComparison');
+
+Route::get('/esl/small', [DetailController::class,'getSmallEsl'])->name('smallEsl');
+
+Route::get('/esl/big', [DetailController::class,'getBigEsl'])->name('bigEsl');
+
+Route::get('/homePage', [DetailController::class,'getHomePage'])->name('homePage');
 

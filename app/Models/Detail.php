@@ -10,6 +10,6 @@ class Detail extends Model
     use HasFactory;
 
     protected $fillable = [
-        'code', 'name', 'codeName', 'structureMaterial', 'clothMaterial', 'color', 'spongeQuality', 'resitance', 'pillowsIncluded', 'isAssemblyNeeded', 'leftSide', 'size', 'description', 'price'
+        'code', 'name', 'codeName', 'structureMaterial', 'clothMaterial', 'color', 'spongeQuality', 'resitance', 'pillowsIncluded', 'isAssemblyNeeded', 'leftSide', 'size', 'description', 'qrCode', 'price'
     ];
 }

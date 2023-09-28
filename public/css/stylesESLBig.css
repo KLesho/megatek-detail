@@ -1,0 +1,126 @@
+/* Reset some default styles */
+body, h1, h2, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and set font styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+/* Style the buttons */
+.button-container {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.red-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 0 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.red-button:hover {
+    background-color: #cc0000;
+}
+
+/* Style the content container */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    padding-top: 0;
+    margin: 0;
+    width: 2000px;
+}
+
+/* Style the columns */
+.column {
+    flex: 1;
+    padding: 10px;
+    margin: 8px -83px -16px -374px;
+    max-width: 45%;
+}
+
+/* Style the sections */
+.section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+    width: calc(50% - 20px); /* 50% of the container width, minus margin */
+    height: 148px;
+    margin: 0;
+}
+
+/* Style the section title */
+.section-title {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+}
+
+/* Style the section content */
+.section-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the sub-sections */
+.sub-section {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-section-left {
+    background-color: lightgray;
+    color: black;
+    margin-right: 0;
+    text-align: left;
+    padding-right: 6px;
+    font-size: 20px;
+}
+
+.sub-section-right {
+    background-color: #333;
+    color: white;
+    margin-left: 0;
+    text-align: right;
+    font-size: 20px;
+}
+
+/* Style the description text */
+.description {
+    color: black;
+    font-size: 15px;
+    margin: auto;
+}

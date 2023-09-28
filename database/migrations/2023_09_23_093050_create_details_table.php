@@ -30,6 +30,8 @@ return new class extends Migration
             $table->string('description');
             $table->decimal('price');
             $table->string('qrCode');
+            $table->longtext('image');
+
             $table->timestamps();
         });
     }

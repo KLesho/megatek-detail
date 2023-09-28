@@ -1,0 +1,77 @@
+/* Set the page size to A3 dimensions (landscape orientation) */
+@page {
+    size: 11.7in 16.5in; /* A3 size in inches */
+    margin: 0; /* Remove default margins */
+}
+
+/* ... (previous styles) */
+
+/* Content container styles */
+.content {
+    width: 80%;
+    max-width: 11.7in; /* Limit content width to A3 width */
+    margin: 20px auto; /* Add margin at the top for spacing */
+    padding: 10px; /* Reduce padding for a more compact layout */
+    background-color: #fff; /* Background color for the content area */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+}
+
+/* Price section styles at the bottom */
+.price-section {
+    background-color: #fff; /* Background color for the price section */
+    text-align: center;
+    /*padding: 10px;  Reduce padding for a more compact layout */
+    width: 80%; /* Limit the width to match the content */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Price value styles */
+.price-value {
+    font-size: 36px; /* Adjust the font size for the price */
+    color: red; /* Text color in red */
+   /* padding: 10px 0;  Add padding to control the height */
+}
+
+/* ... (continue with the rest of your styles) */
+/*.qr-code-container{
+    width: 35px !important;
+    height: 35px !important;
+}
+.product-image{
+    width: 50px;
+    height: 50px;
+}
+img{
+    width: 40px;
+    height: 40px;
+}*/
+.code{
+    width: 44%;
+}
+.code-field{
+    margin-top: -61px;
+    margin-left: 133px;
+}
+.property{
+    font-size: 12px;
+    margin-left: -24px;
+}
+.divani{
+    margin-top: 72px;
+    width: 50px;
+    height: 58px;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}
+.scancode{
+    width: 25px;
+    height: 25px;
+    margin-left: 200px;
+}
+.description-content{
+    background-color: #D3D3D3;
+}
